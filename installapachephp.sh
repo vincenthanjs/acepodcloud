@@ -9,4 +9,5 @@ systemctl enable httpd.service
 yum install php php-mysql -y
 systemctl restart httpd.service
 
+wget https://raw.githubusercontent.com/vincenthanjs/acepodcloud/master/info.php -O /var/www/html/serverinfo.php
 
