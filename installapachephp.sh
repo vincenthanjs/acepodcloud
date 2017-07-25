@@ -11,4 +11,6 @@ systemctl restart httpd.service
 
 wget https://raw.githubusercontent.com/vincenthanjs/acepodcloud/master/info.php -O /var/www/html/serverinfo.php
 
+wget https://raw.githubusercontent.com/vincenthanjs/acepodcloud/master/nsxtest.php -O /var/www/html/index.php
+
 setsebool -P httpd_can_network_connect_db 1
