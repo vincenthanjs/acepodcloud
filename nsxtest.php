@@ -13,7 +13,7 @@ echo "<br>You are accessing <b>NSX Test App!</b><br><br>";
 
 //echo "<table border=1 width=500>";
 
-$servername = "10.10.97.51";
+$servername = "10.10.98.11";
 $username = "root";
 $password = "password";
 $dbname = "classicmodels";
@@ -29,7 +29,7 @@ if ($conn->connect_error) {
 $sql = "SELECT customerNumber, customerName, contactLastName FROM customers";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
-    echo  "SQL Connection successful. The results as follow:<br><br>";
+    echo  "SQL Connection to ". $servername . " successful. The results as follow:<br><br>";
     // output data of each row
     while($row = $result->fetch_assoc()) {
         echo "<tr><td>id: " . $row["customerNumber"]. "</td><td> - Name: " . $row["customerName"]. " " . $row["contactLastName"]. "</td></tr><br>";
